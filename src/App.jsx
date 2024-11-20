@@ -24,28 +24,24 @@
 
 // export default App;
 
-import './index.css';
 import React from "react";
-import Header from "./components/header";
-import Services from "./components/services";
-import CaseStudies from "./components/caseStudies";
-import Process from "./components/workingProcess";
-import Team from "./components/team";
-import Testimonials from "./components/testimonials";
-import Contact from "./components/contactUs";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/home";
+import Contact from "./pages/contactUs";
+import NoPage from "./pages/noPage";
+import './index.css';  // Make sure the path is correct based on your file structure
+ 
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Header />
-      <Services />
-      <CaseStudies />
-      <Process />
-      <Team />
-      <Testimonials />
-      <Contact />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="*" element={<NoPage />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
