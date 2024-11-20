@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { Star } from "lucide-react";
 import {
   Share2,
   Play,
@@ -20,11 +21,11 @@ import Testimonials from "../components/testimonials";
 
 export default function LandingPage() {
   const navigation = [
-    { name: "About us", href: "/" },
-    { name: "Services", href: "#" },
-    { name: "Use Cases", href: "#" },
-    { name: "Pricing", href: "#" },
-    { name: "Blog", href: "#" },
+    { name: "About us", href: "about" },
+    { name: "Services", href: "#services" },
+    { name: "Use Cases", href: "/use-cases" },
+    { name: "Pricing", href: "/pricing#" },
+    { name: "Blog", href: "/blog" },
   ];
 
   const services = [
@@ -114,8 +115,7 @@ export default function LandingPage() {
         "2+ years of experience in writing and editing. Skilled in creating compelling, SEO-optimized content for various industries",
     },
   ];
-
-  
+  const [showAll, setShowAll] = useState(false);
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -148,7 +148,7 @@ export default function LandingPage() {
       <header className="px-6 py-8">
         <div className="flex items-center justify-between max-w-[1400px] mx-auto">
           <div className="flex items-center gap-2">
-            <div className="h-6 w-6 bg-black" />
+           <Star className="h-8 w-8 text-black fill-current" />
             <span className="text-xl font-bold">Positivus</span>
           </div>
           <nav className="hidden lg:flex items-center justify-center flex-1 mx-8">
@@ -156,14 +156,14 @@ export default function LandingPage() {
               <Link
                 key={item.name}
                 to={item.href}
-                className="px-5 py-2 text-sm font-medium text-gray-900 hover:text-gray-600"
+                className="px-5 py-2 text-sm font-medium text-black-900 hover:text-gray-600"
               >
                 {item.name}
               </Link>
             ))}
           </nav>
           <button className="px-6 py-2 rounded-md border border-gray-300 text-sm font-medium hover:bg-gray-100">
-            Request a quote
+           <Link to="/quote">Request a quote</Link> 
           </button>
         </div>
       </header>
@@ -375,20 +375,18 @@ export default function LandingPage() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <div className="inline-block px-4 py-2 bg-[#C4F934] rounded-md">
-                  <h2 className="text-2xl font-bold">Team</h2>
+                  <h2 className="text-2xl font-bold">Meet Our Team</h2>
                 </div>
                 <p className="text-lg">
                   Meet the skilled and experienced team behind our successful
-                  digital marketing strategies
+                  digital marketing strategies.
                 </p>
               </div>
 
+              {/* Grid of team members */}
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {team.map((member, index) => (
-                  <div
-                    key={index}
-                    className="p-6 rounded-3xl border border-gray-200"
-                  >
+                {team.slice(0, showAll ? team.length : 3).map((member, index) => (
+                  <div key={index} className="p-6 rounded-3xl border border-gray-200">
                     <div className="space-y-4">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-4">
@@ -397,37 +395,36 @@ export default function LandingPage() {
                           </div>
                           <div>
                             <h3 className="font-bold">{member.name}</h3>
-                            <p className="text-sm text-gray-600">
-                              {member.role}
-                            </p>
+                            <p className="text-sm text-gray-600">{member.role}</p>
                           </div>
                         </div>
                         <Link
                           to="#"
                           className="p-2 hover:bg-gray-100 rounded-md transition-colors"
                         >
-                         {/* LinkedIn Icon in Black Circle with Green 'in' */}
-                         <div className="w-10 h-10 flex items-center justify-center bg-black rounded-full">
-                         <span className="text-[#C4F934] text-sm font-bold">in</span>
-                         </div>
+                          {/* LinkedIn Icon */}
+                          <div className="w-10 h-10 flex items-center justify-center bg-black rounded-full">
+                            <span className="text-[#C4F934] text-sm font-bold">in</span>
+                          </div>
                         </Link>
                       </div>
-                      <p className="text-sm text-gray-600">
-                        {member.description}
-                      </p>
+                      <p className="text-sm text-gray-600">{member.description}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
+              {/* See All Team Button */}
               <div className="flex justify-center">
-                <button className="px-8 py-2 rounded-md border border-gray-300 text-sm font-medium hover:bg-gray-100">
-                  See all team
+                <button
+                  onClick={() => setShowAll(!showAll)} // Toggle visibility of all members
+                  className="px-8 py-2 rounded-md border border-gray-300 text-sm font-medium hover:bg-gray-100"
+                >
+                  {showAll ? "See less" : "See all team members"}
                 </button>
               </div>
             </div>
           </section>
-
           {/* Testimonials Section */}
 
           <Testimonials></Testimonials>
@@ -544,7 +541,7 @@ export default function LandingPage() {
       <div className="flex flex-col md:flex-row justify-between items-center gap-8">
         {/* Left Section - Positivus Logo */}
         <div className="flex items-center gap-2">
-          <div className="h-6 w-6 bg-white" />
+        <Star className="h-6 w-6 text-white fill-current" />
           <span className="text-xl font-bold">Positivus</span>
         </div>
 
