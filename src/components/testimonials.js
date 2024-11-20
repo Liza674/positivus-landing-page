@@ -1,16 +1,17 @@
-import React from 'react';
+import React from "react";
 
-const Testimonials = () => {
+
+function Testimonials() {
   return (
-    <section id="testimonials" className="testimonials">
-      <div className="container">
-        <h2>What Our Clients Say</h2>
-        <div className="testimonial">
-          <p>"They transformed our business!"</p>
-        </div>
-      </div>
+    <section className="testimonials">
+      <h2>Testimonials</h2>
+      <blockquote>
+        "We have been working with Positivus for the past year and have seen significant increases in website traffic
+        and leads."
+      </blockquote>
+      <cite>- John Smith, CEO</cite>
     </section>
   );
-};
+}
 
 export default Testimonials;

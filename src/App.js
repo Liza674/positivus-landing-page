@@ -25,29 +25,27 @@
 // export default App;
 
 import './index.css';
-import React from 'react';
-import Header from './components/header';
-import Hero from './components/heroSection';
-import Services from './components/services';
-import CaseStudies from './components/caseStudies';
-import WorkingProcess from './components/workingProcess';
-import Team from './components/team';
-import Testimonials from './components/testimonials';
-import ContactUs from './components/contactUs';
+import React from "react";
+import Header from "./components/header";
+import Services from "./components/services";
+import CaseStudies from "./components/caseStudies";
+import Process from "./components/workingProcess";
+import Team from "./components/team";
+import Testimonials from "./components/testimonials";
+import Contact from "./components/contactUs";
 
-const App = () => {
+function App() {
   return (
-    <>
+    <div className="App">
       <Header />
-      <Hero />
       <Services />
       <CaseStudies />
-      <WorkingProcess />
+      <Process />
       <Team />
       <Testimonials />
-      <ContactUs />
-    </>
+      <Contact />
+    </div>
   );
-};
+}
 
 export default App;

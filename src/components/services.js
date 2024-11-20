@@ -1,27 +1,29 @@
-import React from 'react';
+import React from "react";
 
-const Services = () => {
+function Services() {
   const services = [
-    { title: 'SEO Optimization', description: 'Boost your rankings on Google.' },
-    { title: 'PPC Campaigns', description: 'Increase traffic with paid ads.' },
-    { title: 'Content Creation', description: 'Engaging content for your brand.' },
+    { title: "Search Engine Optimization", icon: "🔍" },
+    { title: "Pay-Per-Click Advertising", icon: "💰" },
+    { title: "Social Media Marketing", icon: "📱" },
+    { title: "Email Marketing", icon: "✉️" },
+    { title: "Content Creation", icon: "✍️" },
+    { title: "Analytics and Tracking", icon: "📊" },
   ];
 
   return (
-    <section id="services" className="services">
-      <div className="container">
-        <h2>Our Services</h2>
-        <div className="service-list">
-          {services.map((service, index) => (
-            <div key={index} className="service-item">
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
-            </div>
-          ))}
-        </div>
+    <section className="services">
+      <h2>Services</h2>
+      <div className="service-cards">
+        {services.map((service, index) => (
+          <div key={index} className="service-card">
+            <div className="service-icon">{service.icon}</div>
+            <h3>{service.title}</h3>
+            <p>Learn more</p>
+          </div>
+        ))}
       </div>
     </section>
   );
-};
+}
 
 export default Services;

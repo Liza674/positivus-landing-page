@@ -1,19 +1,23 @@
 import React from "react";
 
-const CaseStudies = () => {
+
+function CaseStudies() {
+  const caseStudies = [
+    "For local businesses, we implemented a regional SEO strategy...",
+    "For a B2B software company, we developed a unique content plan...",
+    "For an e-commerce store, we created a targeted PPC campaign...",
+  ];
+
   return (
-    <section id="case-studies" className="case-studies">
-      <div className="container">
-        <h2>Our Successful Projects</h2>
-        <p>Explore how we’ve made a difference for our clients.</p>
-        <div className="case-grid">
-          <div className="case-item">Project A</div>
-          <div className="case-item">Project B</div>
-          <div className="case-item">Project C</div>
-        </div>
-      </div>
+    <section className="case-studies">
+      <h2>Case Studies</h2>
+      <ul>
+        {caseStudies.map((study, index) => (
+          <li key={index}>{study}</li>
+        ))}
+      </ul>
     </section>
   );
-};
+}
 
 export default CaseStudies;
