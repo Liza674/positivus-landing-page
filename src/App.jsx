@@ -29,7 +29,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
 import Contact from "./pages/contactUs";
 import NoPage from "./pages/noPage";
-import './index.css';  // Make sure the path is correct based on your file structure
+import './index.css';  
  
 
 const App = () => {
