@@ -174,8 +174,8 @@ export default function LandingPage() {
           <section className="py-16">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
               {/* Left side content */}
-              <div className="lg:w-1/2 space-y-8">
-                <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
+              <div className="lg:w-1/2 space-y-6">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                   Navigating the digital landscape for success.
                  </h1>
                  <p className="text-lg text-gray-600 max-w-lg">
@@ -193,16 +193,15 @@ export default function LandingPage() {
              <img
                 src="/img/1.png" // Path to your image
                alt="Hero Image"
-               className="w-72 h-auto object-contain" // Adjust size as needed
+               className="w-full h-auto max-w-lg mx-auto" // Adjust size as needed
              />
             </div>
         </div>
        </section>
 
           {/* Logos Section */}
-          <section className="py-16 overflow-hidden">
-            <div className="relative w-full">
-              <div className="flex gap-96 animate-marquee w-full">
+          <section className="py-16">
+            <div className="flex flex-wrap gap-12 justify-center">            
                 {/* Logos to scroll */}
                 {[
                   { src: "/img/amazon.png", alt: "Amazon" },
@@ -216,11 +215,10 @@ export default function LandingPage() {
                     key={index}
                     src={logo.src}
                     alt={logo.alt}
-                    className="h-8"
+                    className="h-12 md:h-16"
                   />
                 ))}
               </div>
-            </div>
           </section>
 
           {/* Services Section */}
@@ -522,18 +520,15 @@ export default function LandingPage() {
                       Send Message
                     </button>
                   </form>
-
-                  <div className="relative hidden lg:block">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="relative w-48 h-48">
-                        <div className="absolute top-0 left-0 w-32 h-32 bg-black transform rotate-45" />
-                        <div className="absolute bottom-0 right-0 w-24 h-24 bg-[#C4F934] transform rotate-45" />
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="w-full h-full border-2 border-gray-300 rounded-md animate-[spin_20s_linear_infinite]" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                   <div className="relative hidden lg:block">
+                     <div className="absolute inset-0 flex items-end justify-end pr-8 pb-8">
+                      <img
+                         src="/img/8.png" 
+                         alt="Contact Logo"
+                         className="absolute top-0 right-0 w-[32rem] h-[28rem] object-contain transform translate-x-1/2"
+                       />
+                     </div>
+                   </div>
                 </div>
               </div>
             </div>
@@ -541,101 +536,104 @@ export default function LandingPage() {
         </div>
       </main>
 
-      {/* Footer Section */}
-      <footer className="bg-black text-white">
-        <div className="max-w-[1400px] mx-auto px-6 py-12">
-          <div className="grid gap-12">
-            {/* Top Section */}
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-              {/* Logo */}
-              <div className="flex items-center gap-2">
-                <div className="h-6 w-6 bg-white" />
-                <span className="text-xl font-bold">Positivus</span>
-              </div>
+     {/* Footer Section */}
+<footer className="bg-black text-white">
+  <div className="max-w-[1400px] mx-auto px-6 py-12">
+    <div className="grid gap-12">
+      {/* Top Section */}
+      <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+        {/* Left Section - Positivus Logo */}
+        <div className="flex items-center gap-2">
+          <div className="h-6 w-6 bg-white" />
+          <span className="text-xl font-bold">Positivus</span>
+        </div>
 
-              {/* Navigation */}
-              <nav className="flex flex-col md:flex-row flex-wrap gap-4 text-center md:text-left">
-                <Link to="/about-us" className="hover:text-gray-300">
-                  About us
-                </Link>
-                <Link to="/services" className="hover:text-gray-300">
-                  Services
-                </Link>
-                <Link to="/use-cases" className="hover:text-gray-300">
-                  Use Cases
-                </Link>
-                <Link to="/pricing" className="hover:text-gray-300">
-                  Pricing
-                </Link>
-                <Link to="/blog" className="hover:text-gray-300">
-                  Blog
-                </Link>
-              </nav>
-            </div>
+        {/* Middle Section - Navigation Links */}
+        <nav className="flex flex-col md:flex-row gap-6 justify-center md:justify-center">
+          <Link to="/about-us" className="text-sm text-gray-400 hover:text-white">
+            About us
+          </Link>
+          <Link to="/services" className="text-sm text-gray-400 hover:text-white">
+            Services
+          </Link>
+          <Link to="/use-cases" className="text-sm text-gray-400 hover:text-white">
+            Use Cases
+          </Link>
+          <Link to="/pricing" className="text-sm text-gray-400 hover:text-white">
+            Pricing
+          </Link>
+          <Link to="/blog" className="text-sm text-gray-400 hover:text-white">
+            Blog
+          </Link>
+        </nav>
 
-            {/* Middle Section */}
-            <div className="grid md:grid-cols-2 gap-12">
-              {/* Contact Section */}
-              <div className="space-y-4">
-                <div className="inline-block px-4 py-2 bg-[#C4F934] rounded-md">
-                  <span className="text-black font-bold">Contact us:</span>
-                </div>
-                <div className="space-y-2 text-gray-300">
-                  <p>Email: info@positivus.com</p>
-                  <p>Phone: 555-567-8901</p>
-                  <p>Address: 1234 Main St</p>
-                  <p>Moonstone City, Stardust State 12345</p>
-                </div>
-              </div>
+        {/* Right Section - Social Media Logos */}
+        <div className="flex gap-6 justify-center md:justify-end">
+          <Link to="https://www.linkedin.com" className="text-gray-400 hover:text-white">
+            <Linkedin className="w-6 h-6" />
+          </Link>
+          <Link to="https://www.facebook.com" className="text-gray-400 hover:text-white">
+            <Facebook className="w-6 h-6" />
+          </Link>
+          <Link to="https://www.twitter.com" className="text-gray-400 hover:text-white">
+            <Twitter className="w-6 h-6" />
+          </Link>
+        </div>
+      </div>
 
-              {/* Newsletter Section */}
-              <div className="space-y-4">
-                <form
-                  onSubmit={handleNewsletterSubmit}
-                  className="flex flex-col sm:flex-row gap-4"
-                >
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    required
-                    className="flex-grow px-4 py-2 rounded-md bg-gray-800 border border-gray-700 text-white"
-                  />
-                  <button
-                    type="submit"
-                    className="px-4 py-2 bg-[#C4F934] text-black rounded-md hover:bg-[#b3e92f] transition-colors"
-                  >
-                    Subscribe to news
-                  </button>
-                </form>
-              </div>
-            </div>
-
-            {/* Bottom Section */}
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-gray-800">
-              <p className="text-sm text-gray-400 text-center md:text-left">
-                © 2023 Positivus. All Rights Reserved.
-              </p>
-              <div className="flex items-center gap-4">
-                <Link to="#" className="text-gray-400 hover:text-white">
-                  <Linkedin className="w-5 h-5" />
-                </Link>
-                <Link to="#" className="text-gray-400 hover:text-white">
-                  <Facebook className="w-5 h-5" />
-                </Link>
-                <Link to="#" className="text-gray-400 hover:text-white">
-                  <Twitter className="w-5 h-5" />
-                </Link>
-              </div>
-              <Link
-                to="/privacy-policy"
-                className="text-sm text-gray-400 hover:text-white"
-              >
-                Privacy Policy
-              </Link>
-            </div>
+      {/* Middle Section - Contact Info */}
+      <div className="grid md:grid-cols-2 gap-12">
+        {/* Contact Info */}
+        <div className="space-y-4">
+          <div className="inline-block px-4 py-2 bg-[#C4F934] rounded-md">
+            <span className="text-black font-bold">Contact us:</span>
+          </div>
+          <div className="space-y-2 text-gray-300">
+            <p>Email: info@positivus.com</p>
+            <p>Phone: 555-567-8901</p>
+            <p>Address: 1234 Main St</p>
+            <p>Moonstone City, Stardust State 12345</p>
           </div>
         </div>
-      </footer>
+
+        {/* Newsletter Section */}
+        <div className="space-y-4">
+          <form
+            onSubmit={handleNewsletterSubmit}
+            className="flex flex-col sm:flex-row gap-4"
+          >
+            <input
+              type="email"
+              placeholder="Email"
+              required
+              className="flex-grow px-4 py-2 rounded-md bg-gray-800 border border-gray-700 text-white"
+            />
+            <button
+              type="submit"
+              className="px-4 py-2 bg-[#C4F934] text-black rounded-md hover:bg-[#b3e92f] transition-colors"
+            >
+              Subscribe to news
+            </button>
+          </form>
+        </div>
+      </div>
+
+      {/* Bottom Section */}
+      <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-gray-800">
+        <p className="text-sm text-gray-400 text-center md:text-left">
+          © 2023 Positivus. All Rights Reserved.
+        </p>
+        <Link
+          to="/privacy-policy"
+          className="text-sm text-gray-400 hover:text-white"
+        >
+          Privacy Policy
+        </Link>
+      </div>
+    </div>
+  </div>
+</footer>
+
     </div>
   );
 }
