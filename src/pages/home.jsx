@@ -163,7 +163,7 @@ export default function LandingPage() {
             ))}
           </nav>
           <button className="px-6 py-2 rounded-md border border-gray-300 text-sm font-medium hover:bg-gray-100">
-           <Link to="/quote">Request a quote</Link> 
+          <Link to="/quote">Request a quote</Link> 
           </button>
         </div>
       </header>
