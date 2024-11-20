@@ -188,7 +188,7 @@ export default function LandingPage() {
                    </button>
              </div>
 
-             {/* Right side content (Replace with 1.png) */}
+             {/* Right side content */}
              <div className="lg:w-1/2 relative flex justify-center">
              <img
                 src="/img/1.png" // Path to your image
@@ -408,10 +408,10 @@ export default function LandingPage() {
                           to="#"
                           className="p-2 hover:bg-gray-100 rounded-md transition-colors"
                         >
-                          {/* LinkedIn Icon in Black Circle with Green 'in' */}
-                          <div className="w-10 h-10 flex items-center justify-center bg-black rounded-full">
-                           <span className="text-[#C4F934] text-sm font-bold">in</span>
-                          </div>
+                         {/* LinkedIn Icon in Black Circle with Green 'in' */}
+                         <div className="w-10 h-10 flex items-center justify-center bg-black rounded-full">
+                         <span className="text-[#C4F934] text-sm font-bold">in</span>
+                         </div>
                         </Link>
                       </div>
                       <p className="text-sm text-gray-600">
