@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +10,286 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+  color: #007BFF;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+button, .btn {
+  padding: 0.8em 1.5em;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: #007BFF;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #007BFF;
+  border: 2px solid #007BFF;
+}
+
+.btn-outline:hover {
+  background-color: #007BFF;
+  color: white;
+}
+
+/* Section spacing */
+section {
+  padding: 4rem 0;
+}
+
+/* Header Styles */
+.header {
+  background: #f8f9fa;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav ul li {
+  margin-left: 1.5rem;
+}
+
+.nav ul li a {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav ul li a:hover {
+  color: #007BFF;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f1f1f1;
+  padding: 5rem 0;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Services Section */
+.services {
+  background: #fff;
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #007BFF;
+}
+
+.service-list {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.service-item {
+  text-align: center;
+  flex: 1;
+  padding: 2rem;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.service-item h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+.service-item p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Case Studies Section */
+.case-studies {
+  background: #f8f8f8;
+  text-align: center;
+}
+
+.case-studies h2 {
+  font-size: 2rem;
+  color: #007BFF;
+  margin-bottom: 1.5rem;
+}
+
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.case-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+/* Working Process Section */
+.working-process {
+  background: #f1f1f1;
+  text-align: center;
+}
+
+.working-process h2 {
+  font-size: 2rem;
+  color: #007BFF;
+  margin-bottom: 2rem;
+}
+
+.working-process ul {
+  list-style: none;
+  padding: 0;
+}
+
+.working-process ul li {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Team Section */
+.team {
+  background: #fff;
+}
+
+.team h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #007BFF;
+}
+
+.team p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  color: #007BFF;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial {
+  font-size: 1.2rem;
+  color: #333;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  margin: 1rem auto;
+  max-width: 600px;
+  border-radius: 8px;
+}
+
+/* Contact Us Section */
+.contact-us {
+  background: #f1f1f1;
+}
+
+.contact-us h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #007BFF;
+}
+
+.contact-us form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-us input,
+.contact-us textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact-us button {
+  width: 100%;
 }
