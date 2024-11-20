@@ -1,17 +1,5 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
-/* General Styles */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -19,9 +7,10 @@ code {
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
-  color: #333;
+  background-color: #121212; /* Figma dark background */
+  color: #FFFFFF; /* White text */
 }
 
 .container {
@@ -31,16 +20,17 @@ body {
 }
 
 h1, h2, h3 {
-  color: #222;
+  color: #2ECC71; /* Green headers */
+  font-weight: bold;
 }
 
 a {
   text-decoration: none;
-  color: #007BFF;
+  color: #2ECC71; /* Green links */
 }
 
 a:hover {
-  color: #0056b3;
+  color: #27AE60; /* Darker green hover effect */
 }
 
 button, .btn {
@@ -49,38 +39,38 @@ button, .btn {
   cursor: pointer;
   font-size: 1rem;
   border-radius: 5px;
+  transition: all 0.3s ease-in-out;
 }
 
 .btn-primary {
-  background-color: #007BFF;
+  background-color: #2ECC71;
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
+  background-color: #27AE60;
 }
 
 .btn-outline {
   background: transparent;
-  color: #007BFF;
-  border: 2px solid #007BFF;
+  color: #2ECC71;
+  border: 2px solid #2ECC71;
 }
 
 .btn-outline:hover {
-  background-color: #007BFF;
+  background-color: #2ECC71;
   color: white;
 }
 
-/* Section spacing */
+/* Section Spacing */
 section {
-  padding: 4rem 0;
+  padding: 6rem 0;
 }
 
 /* Header Styles */
 .header {
-  background: #f8f9fa;
+  background-color: #121212;
   padding: 1.5rem 0;
-  border-bottom: 1px solid #e6e6e6;
 }
 
 .header .container {
@@ -89,23 +79,36 @@ section {
   align-items: center;
 }
 
+.logo h1 {
+  font-size: 2rem;
+  color: #2ecc71;
+  font-weight: bold;
+}
+
 .nav ul {
   display: flex;
   list-style: none;
-}
-
-.nav ul li {
-  margin-left: 1.5rem;
+  gap: 2rem;
 }
 
 .nav ul li a {
+  color: white;
   font-size: 1rem;
+  text-transform: uppercase;
   font-weight: bold;
-  color: #333;
 }
 
-.nav ul li a:hover {
-  color: #007BFF;
+.btn-primary {
+  background-color: #2ecc71;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #27ae60;
 }
 
 /* Hero Section */
@@ -113,37 +116,43 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #f1f1f1;
   padding: 5rem 0;
+  background-color: #121212;
+}
+
+.hero-text {
+  max-width: 50%;
 }
 
 .hero-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #222;
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
 }
 
 .hero-text p {
   font-size: 1.2rem;
+  color: #d3d3d3;
   margin-bottom: 2rem;
-  color: #555;
 }
 
 .hero-image img {
   max-width: 100%;
-  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Services Section */
 .services {
-  background: #fff;
+  background: #1A1A1A; /* Slightly lighter background */
+  text-align: center;
 }
 
 .services h2 {
-  text-align: center;
+  font-size: 2.5rem;
+  color: #2ECC71;
   margin-bottom: 2rem;
-  font-size: 2rem;
-  color: #007BFF;
 }
 
 .service-list {
@@ -156,140 +165,51 @@ section {
   text-align: center;
   flex: 1;
   padding: 2rem;
-  background: #f9f9f9;
-  border: 1px solid #ddd;
+  background: #121212;
+  border: 1px solid #2ECC71;
   border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .service-item h3 {
   margin-bottom: 1rem;
   font-size: 1.5rem;
-  color: #222;
+  color: #FFFFFF;
 }
 
 .service-item p {
   font-size: 1rem;
-  color: #666;
+  color: #D3D3D3;
 }
 
 /* Case Studies Section */
 .case-studies {
-  background: #f8f8f8;
+  background-color: #1a1a1a;
+  padding: 4rem 0;
   text-align: center;
 }
 
 .case-studies h2 {
   font-size: 2rem;
-  color: #007BFF;
-  margin-bottom: 1.5rem;
+  color: #2ecc71;
+  margin-bottom: 1rem;
+}
+
+.case-studies p {
+  font-size: 1rem;
+  color: #d3d3d3;
 }
 
 .case-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
-  margin-top: 2rem;
 }
 
 .case-item {
-  background: #fff;
-  border: 1px solid #ddd;
+  background-color: #121212;
+  border: 1px solid #2ecc71;
   padding: 2rem;
+  color: #fff;
   border-radius: 8px;
-}
-
-/* Working Process Section */
-.working-process {
-  background: #f1f1f1;
-  text-align: center;
-}
-
-.working-process h2 {
-  font-size: 2rem;
-  color: #007BFF;
-  margin-bottom: 2rem;
-}
-
-.working-process ul {
-  list-style: none;
-  padding: 0;
-}
-
-.working-process ul li {
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-  color: #333;
-}
-
-/* Team Section */
-.team {
-  background: #fff;
-}
-
-.team h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  color: #007BFF;
-}
-
-.team p {
-  text-align: center;
-  font-size: 1.2rem;
-  color: #555;
-}
-
-/* Testimonials Section */
-.testimonials {
-  background: #f9f9f9;
-  text-align: center;
-}
-
-.testimonials h2 {
-  font-size: 2rem;
-  color: #007BFF;
-  margin-bottom: 1.5rem;
-}
-
-.testimonial {
-  font-size: 1.2rem;
-  color: #333;
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 1.5rem;
-  margin: 1rem auto;
-  max-width: 600px;
-  border-radius: 8px;
-}
-
-/* Contact Us Section */
-.contact-us {
-  background: #f1f1f1;
-}
-
-.contact-us h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  color: #007BFF;
-}
-
-.contact-us form {
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.contact-us input,
-.contact-us textarea {
-  width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-.contact-us button {
-  width: 100%;
 }

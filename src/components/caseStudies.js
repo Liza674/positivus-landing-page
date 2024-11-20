@@ -1,16 +1,15 @@
-import React from 'react';
+import React from "react";
 
 const CaseStudies = () => {
   return (
     <section id="case-studies" className="case-studies">
       <div className="container">
-        <h2>Case Studies</h2>
-        <p>Examples of our successful projects.</p>
+        <h2>Our Successful Projects</h2>
+        <p>Explore how we’ve made a difference for our clients.</p>
         <div className="case-grid">
-          {/* Placeholder for images */}
-          <div className="case-item">Project 1</div>
-          <div className="case-item">Project 2</div>
-          <div className="case-item">Project 3</div>
+          <div className="case-item">Project A</div>
+          <div className="case-item">Project B</div>
+          <div className="case-item">Project C</div>
         </div>
       </div>
     </section>

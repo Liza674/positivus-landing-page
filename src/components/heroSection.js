@@ -1,22 +1,24 @@
-import React from 'react';
+import React from "react";
 
 const Hero = () => {
   return (
     <section className="hero">
       <div className="container hero-content">
         <div className="hero-text">
-          <h1>Navigating the digital landscape for success</h1>
+          <h1>Elevate Your Digital Success</h1>
           <p>
-            Our digital marketing agency helps businesses grow and succeed
-            through a range of services including SEO, PPC, and content
-            creation.
+            Discover tailored strategies and cutting-edge solutions for your
+            business growth. We transform ideas into impactful realities.
           </p>
-          <a href="#services" className="btn btn-primary">Book a Consultation</a>
+          <a href="#services" className="btn btn-primary">
+            Get Started
+          </a>
         </div>
         <div className="hero-image">
           <img
-            src="megaphone-illustration.png"
-            alt="Megaphone Illustration"
+            src="/assets/hero-image.png"
+            alt="Hero illustration"
+            className="hero-img"
           />
         </div>
       </div>
